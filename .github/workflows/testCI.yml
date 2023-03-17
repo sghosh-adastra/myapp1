@@ -25,7 +25,7 @@ jobs:
       - run: npm install -g surge
       - name: Deploy App to Staging
         if: github.event_name == 'push'
-        run: npm run surge --project ./build --domain aboard-arithmetic.surge.sh
+        run: npm surge --project ./build --domain aboard-arithmetic.surge.sh
         env:
           SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
           SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
